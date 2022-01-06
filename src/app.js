@@ -14,11 +14,6 @@ window.onload = () => {
 };
 
 let generateExcuse = () => {
-  let whoIndex = Math.floor(Math.random() * who.length);
-  let actionIndex = Math.floor(Math.random() * action.length);
-  let whatIndex = Math.floor(Math.random() * what.length);
-  let whenIndex = Math.floor(Math.random() * when.length);
-
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
   let what = ["my homework", "the keys", "the car"];
@@ -30,13 +25,18 @@ let generateExcuse = () => {
     "while I was praying"
   ];
 
+  let whoIndex = Math.floor(Math.random() * who.length);
+  let actionIndex = Math.floor(Math.random() * action.length);
+  let whatIndex = Math.floor(Math.random() * what.length);
+  let whenIndex = Math.floor(Math.random() * when.length);
+
   return (
-    whoIndex[who] +
+    who[whoIndex] +
     " " +
-    actionIndex[action] +
+    action[actionIndex] +
     " " +
-    whatIndex[what] +
+    what[whatIndex] +
     " " +
-    whenIndex[when]
+    when[whenIndex]
   );
 };
